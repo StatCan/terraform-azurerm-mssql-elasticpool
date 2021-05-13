@@ -8,7 +8,7 @@ resource "azurerm_mssql_elasticpool" "elasticpool" {
   zone_redundant      = var.zone_redundant
 
   sku {
-    name     = var.skuname
+    name     = var.sku_name
     tier     = var.tier
     family   = var.family
     capacity = var.capacity

@@ -36,7 +36,7 @@ variable "zone_redundant" {
 
 # SKU
 
-variable "skuname" {
+variable "sku_name" {
   description = "(Required) Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either vCore based tier + family pattern (e.g. GP_Gen4, BC_Gen5) or the DTU based BasicPool, StandardPool, or PremiumPool pattern."
 }
 

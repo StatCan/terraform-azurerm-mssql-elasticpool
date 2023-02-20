@@ -19,38 +19,19 @@ variable "max_size_gb" {
   default     = null
 }
 
-variable "max_size_bytes" {
-  description = "(Optional) The max data size of the elastic pool in bytes. Conflicts with max_size_gb."
-  default     = null
-}
-
 variable "tags" {
   description = "(Optional) A mapping of tags to assign to the resource."
   default     = null
 }
 
-variable "zone_redundant" {
-  description = "(Optional) Whether or not this elastic pool is zone redundant. tier needs to be Premium for DTU based or BusinessCritical for vCore based sku. Defaults to false."
-  default     = null
+variable "edition" {
+  description = "(Required) The edition of the elastic pool to be created. Valid values are Basic, Standard, and Premium. Refer to Azure SQL Database Service Tiers for details."
 }
 
 # SKU
 
-variable "sku_name" {
-  description = "(Required) Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either vCore based tier + family pattern (e.g. GP_Gen4, BC_Gen5) or the DTU based BasicPool, StandardPool, or PremiumPool pattern."
-}
-
 variable "capacity" {
   description = "(Required) The scale up/out capacity, representing server's compute units. For more information see the documentation for your Elasticpool configuration: vCore-based or DTU-based."
-}
-
-variable "tier" {
-  description = "(Required) The tier of the particular SKU. Possible values are GeneralPurpose, BusinessCritical, Basic, Standard, or Premium. For more information see the documentation for your Elasticpool configuration: vCore-based or DTU-based."
-}
-
-variable "family" {
-  description = "(Optional) The family of hardware Gen4 or Gen5."
-  default     = null
 }
 
 # Database Settings

@@ -37,9 +37,11 @@ variable "capacity" {
 # Database Settings
 
 variable "min_capacity" {
-  description = "(Required) The minimum capacity all databases are guaranteed."
+  description = "(Optional) The minimum capacity all databases are guaranteed."
+  default     = null
 }
 
 variable "max_capacity" {
-  description = "(Required) The maximum capacity any one database can consume."
+  description = "(Optional) The maximum capacity any one database can consume."
+  default     = null
 }

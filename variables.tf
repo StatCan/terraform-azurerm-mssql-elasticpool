@@ -14,34 +14,30 @@ variable "server_name" {
   description = "(Required) The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created."
 }
 
-variable "max_size_gb" {
-  description = "(Optional) The max data size of the elastic pool in gigabytes. Conflicts with max_size_bytes."
-  default     = null
-}
-
-variable "tags" {
-  description = "(Optional) A mapping of tags to assign to the resource."
-  default     = null
-}
-
 variable "edition" {
   description = "(Required) The edition of the elastic pool to be created. Valid values are Basic, Standard, and Premium. Refer to Azure SQL Database Service Tiers for details."
 }
 
-# SKU
-
-variable "capacity" {
-  description = "(Required) The scale up/out capacity, representing server's compute units. For more information see the documentation for your Elasticpool configuration: vCore-based or DTU-based."
+variable "pool_dtu" {
+  description = "Required) The total shared DTU for the elastic pool. Valid values depend on the edition which has been defined. Refer to Azure SQL Database Service Tiers for valid combinations."
 }
 
-# Database Settings
-
-variable "min_capacity" {
-  description = "(Optional) The minimum capacity all databases are guaranteed."
+variable "db_dtu_min" {
+  description = "(Optional) The minimum DTU which will be guaranteed to all databases in the elastic pool to be created."
   default     = null
 }
 
-variable "max_capacity" {
-  description = "(Optional) The maximum capacity any one database can consume."
+variable "db_dtu_max" {
+  description = "(Optional) The maximum DTU which will be guaranteed to all databases in the elastic pool to be created."
+  default     = null
+}
+
+variable "pool_size" {
+  description = "(Optional) The maximum size in MB that all databases in the elastic pool can grow to. The maximum size must be consistent with combination of edition and dtu and the limits documented in Azure SQL Database Service Tiers. If not defined when creating an elastic pool, the value is set to the size implied by edition and dtu."
+  default = null
+}
+
+variable "tags" {
+  description = "(Optional) A mapping of tags to assign to the resource."
   default     = null
 }

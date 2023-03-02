@@ -2,13 +2,20 @@ resource "azurerm_mssql_elasticpool" "elasticpool" {
   name                = var.name
   resource_group_name = var.resource_group_name
   location            = var.location
-  
   server_name         = var.server_name
-  edition             = var.edition
-  dtu                 = var.pool_dtu
-  db_dtu_min          = var.db_dtu_min
-  db_dtu_max          = var.db_dtu_max
-  pool_size           = var.pool_size
+  max_size_gb         = var.max_size_gb
+  max_size_bytes      = var.max_size_bytes
+  zone_redundant      = var.zone_redundant
 
-  tags = var.tags
+  sku {
+    name     = var.sku_name
+    tier     = var.tier
+    family   = var.family
+    capacity = var.capacity
+  }
+
+  per_database_settings {
+    min_capacity = var.min_capacity
+    max_capacity = var.max_capacity
+  }
 }

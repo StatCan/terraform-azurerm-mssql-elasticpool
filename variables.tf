@@ -51,8 +51,6 @@ variable "family" {
   default     = null
 }
 
-# Database Settings
-
 variable "min_capacity" {
   description = "(Required) The minimum capacity all databases are guaranteed."
   default     = null
@@ -60,5 +58,5 @@ variable "min_capacity" {
 
 variable "max_capacity" {
   description = "(Required) The maximum capacity any one database can consume."
-  defzault    = null
+  default     = null
 }

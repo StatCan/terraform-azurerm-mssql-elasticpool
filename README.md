@@ -33,7 +33,7 @@ No modules.
 | <a name="input_capacity"></a> [capacity](#input\_capacity) | (Required) The scale up/out capacity, representing server's compute units. For more information see the documentation for your Elasticpool configuration: vCore-based or DTU-based. | `any` | n/a | yes |
 | <a name="input_family"></a> [family](#input\_family) | (Optional) The family of hardware Gen4 or Gen5. | `any` | `null` | no |
 | <a name="input_location"></a> [location](#input\_location) | (Required) Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. | `any` | n/a | yes |
-| <a name="input_max_capacity"></a> [max\_capacity](#input\_max\_capacity) | (Required) The maximum capacity any one database can consume. | `any` | n/a | yes |
+| <a name="input_max_capacity"></a> [max\_capacity](#input\_max\_capacity) | (Required) The maximum capacity any one database can consume. | `any` | `null` | no |
 | <a name="input_max_size_bytes"></a> [max\_size\_bytes](#input\_max\_size\_bytes) | (Optional) The max data size of the elastic pool in bytes. Conflicts with max\_size\_gb. | `any` | `null` | no |
 | <a name="input_max_size_gb"></a> [max\_size\_gb](#input\_max\_size\_gb) | (Optional) The max data size of the elastic pool in gigabytes. Conflicts with max\_size\_bytes. | `any` | `null` | no |
 | <a name="input_min_capacity"></a> [min\_capacity](#input\_min\_capacity) | (Required) The minimum capacity all databases are guaranteed. | `any` | `null` | no |

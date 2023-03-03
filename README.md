@@ -7,10 +7,8 @@ Changelog can be found in CHANGELOG.md
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
-| Name      | Version   |
-|-----------|-----------|
-| terraform | >= 1.0    |
-| azurerm   | >= 3.0    |
+
+No requirements.
 
 ## Providers
 
@@ -38,7 +36,7 @@ No modules.
 | <a name="input_max_capacity"></a> [max\_capacity](#input\_max\_capacity) | (Required) The maximum capacity any one database can consume. | `any` | n/a | yes |
 | <a name="input_max_size_bytes"></a> [max\_size\_bytes](#input\_max\_size\_bytes) | (Optional) The max data size of the elastic pool in bytes. Conflicts with max\_size\_gb. | `any` | `null` | no |
 | <a name="input_max_size_gb"></a> [max\_size\_gb](#input\_max\_size\_gb) | (Optional) The max data size of the elastic pool in gigabytes. Conflicts with max\_size\_bytes. | `any` | `null` | no |
-| <a name="input_min_capacity"></a> [min\_capacity](#input\_min\_capacity) | (Required) The minimum capacity all databases are guaranteed. | `any` | n/a | yes |
+| <a name="input_min_capacity"></a> [min\_capacity](#input\_min\_capacity) | (Required) The minimum capacity all databases are guaranteed. | `any` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created. | `any` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | (Required) The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server. | `any` | n/a | yes |
 | <a name="input_server_name"></a> [server\_name](#input\_server\_name) | (Required) The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created. | `any` | n/a | yes |

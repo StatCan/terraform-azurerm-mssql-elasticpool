@@ -52,11 +52,9 @@ variable "family" {
 }
 
 variable "min_capacity" {
-  description = "(Required) The minimum capacity all databases are guaranteed."
-  default     = null
+  description = "(Optional) The minimum capacity all databases are guaranteed."
 }
 
 variable "max_capacity" {
-  description = "(Required) The maximum capacity any one database can consume."
-  default     = null
+  description = "(Optional) The maximum capacity any one database can consume."
 }

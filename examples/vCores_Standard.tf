@@ -1,5 +1,4 @@
 // See https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tiers-dtu?view=azuresql#elastic-pool-limits for more
-// See https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tiers-dtu?view=azuresql#elastic-pool-limits for more
 data "azurerm_subnet" "devcc-back" {
   name                 = "devcc-back"
   virtual_network_name = "devcc-vnet"
@@ -66,15 +65,16 @@ module "elasticpool" {
   location            = "canadacentral"
   resource_group_name = "hosting-sql-rg"
   server_name         = "servername001"
-  sku_name            = "BasicPool"
-  tier                = "Basic"
-  capacity            = 50
-  min_capacity        = 0
-  max_capacity        = 5
+  sku_name            = "GP_Gen5"
+  tier                = "GeneralPurpose"
+  capacity            = 2
+  min_capacity        = 0.25 
+  max_capacity        = 2
+  family              = "Gen5"
   tags                = {"key" = "value"}
 
   #[Optional] Configurations
-  #max_size_gb         = 4.8828125               # max_size_gb conflicts with max_size_bytes
-  #max_size_bytes      = 4882812500
+  #max_size_gb         = 32               # max_size_gb conflicts with max_size_bytes
+  #max_size_bytes      = 811748818944
   #zone_redundant      = "BusinessCritical"
 }

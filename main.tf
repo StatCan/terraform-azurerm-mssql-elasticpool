@@ -18,4 +18,12 @@ resource "azurerm_mssql_elasticpool" "elasticpool" {
     min_capacity = var.min_capacity
     max_capacity = var.max_capacity
   }
+
+  tags = var.tags
+
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 // See https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tiers-dtu?view=azuresql#elastic-pool-limits for more
-// See https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tiers-dtu?view=azuresql#elastic-pool-limits for more
+
 data "azurerm_subnet" "devcc-back" {
   name                 = "devcc-back"
   virtual_network_name = "devcc-vnet"

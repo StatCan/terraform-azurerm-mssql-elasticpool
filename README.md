@@ -5,12 +5,13 @@ Creates MSSQL Elastic Pools for use with the Azure Managed Database for MSSQL.
 Examples for using the module can be found in the [examples/](examples/) folder.
 Changelog can be found in CHANGELOG.md
 
+Using this module you will be able to create:
+- [Azure SQL Database Elastic Pool](https://learn.microsoft.com/en-us/azure/azure-sql/database/elastic-pool-overview?view=azuresql)
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
-| Name      | Version   |
-|-----------|-----------|
-| terraform | >= 1.0    |
-| azurerm   | >= 3.0    |
+
+No requirements.
 
 ## Providers
 
@@ -35,10 +36,10 @@ No modules.
 | <a name="input_capacity"></a> [capacity](#input\_capacity) | (Required) The scale up/out capacity, representing server's compute units. For more information see the documentation for your Elasticpool configuration: vCore-based or DTU-based. | `any` | n/a | yes |
 | <a name="input_family"></a> [family](#input\_family) | (Optional) The family of hardware Gen4 or Gen5. | `any` | `null` | no |
 | <a name="input_location"></a> [location](#input\_location) | (Required) Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. | `any` | n/a | yes |
-| <a name="input_max_capacity"></a> [max\_capacity](#input\_max\_capacity) | (Required) The maximum capacity any one database can consume. | `any` | n/a | yes |
+| <a name="input_max_capacity"></a> [max\_capacity](#input\_max\_capacity) | (Optional) The maximum capacity any one database can consume. | `any` | n/a | yes |
 | <a name="input_max_size_bytes"></a> [max\_size\_bytes](#input\_max\_size\_bytes) | (Optional) The max data size of the elastic pool in bytes. Conflicts with max\_size\_gb. | `any` | `null` | no |
 | <a name="input_max_size_gb"></a> [max\_size\_gb](#input\_max\_size\_gb) | (Optional) The max data size of the elastic pool in gigabytes. Conflicts with max\_size\_bytes. | `any` | `null` | no |
-| <a name="input_min_capacity"></a> [min\_capacity](#input\_min\_capacity) | (Required) The minimum capacity all databases are guaranteed. | `any` | n/a | yes |
+| <a name="input_min_capacity"></a> [min\_capacity](#input\_min\_capacity) | (Optional) The minimum capacity all databases are guaranteed. | `any` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | (Required) The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created. | `any` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | (Required) The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server. | `any` | n/a | yes |
 | <a name="input_server_name"></a> [server\_name](#input\_server\_name) | (Required) The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created. | `any` | n/a | yes |

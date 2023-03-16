@@ -34,8 +34,6 @@ variable "zone_redundant" {
   default     = null
 }
 
-# SKU
-
 variable "sku_name" {
   description = "(Required) Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either vCore based tier + family pattern (e.g. GP_Gen4, BC_Gen5) or the DTU based BasicPool, StandardPool, or PremiumPool pattern."
 }
@@ -53,12 +51,10 @@ variable "family" {
   default     = null
 }
 
-# Database Settings
-
 variable "min_capacity" {
-  description = "(Required) The minimum capacity all databases are guaranteed."
+  description = "(Optional) The minimum capacity all databases are guaranteed."
 }
 
 variable "max_capacity" {
-  description = "(Required) The maximum capacity any one database can consume."
+  description = "(Optional) The maximum capacity any one database can consume."
 }

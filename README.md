@@ -5,6 +5,9 @@ Creates MSSQL Elastic Pools for use with the Azure Managed Database for MSSQL.
 Examples for using the module can be found in the [examples/](examples/) folder.
 Changelog can be found in CHANGELOG.md
 
+Using this module you will be able to create:
+- [Azure SQL Database Elastic Pool](https://learn.microsoft.com/en-us/azure/azure-sql/database/elastic-pool-overview?view=azuresql)
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 

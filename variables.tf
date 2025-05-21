@@ -29,6 +29,16 @@ variable "tags" {
   default     = null
 }
 
+variable "enclave_type" {
+  description = "(Optional) The type of enclave being used by the database.  The options if set are Default or VBS. Once enabled removing the enclave_type field from the configuration file will force the creation of a new resource."
+  type        = string
+  default     = null
+  validation {
+    condition     = contains(["Default", "VBS", null], var.enclave_type)
+    error_message = "The valid values for enclave_type are Default or VBS."
+  }
+}
+
 variable "zone_redundant" {
   description = "(Optional) Whether or not this elastic pool is zone redundant. tier needs to be Premium for DTU based or BusinessCritical for vCore based sku. Defaults to false."
   default     = null

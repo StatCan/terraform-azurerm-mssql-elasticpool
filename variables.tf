@@ -30,7 +30,7 @@ variable "tags" {
 }
 
 variable "enclave_type" {
-  description = "(Optional) The type of enclave being used by the database.  The options if set are Default or VBS. Once enabled removing the enclave_type field from the configuration file will force the creation of a new resource."
+  description = "(Optional) The type of enclave being used by the database, valid values are Default or VBS."
   type        = string
   default     = "Default"
   validation {

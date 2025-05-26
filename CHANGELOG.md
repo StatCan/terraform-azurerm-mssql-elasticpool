@@ -1,4 +1,4 @@
-## 1.1.0 (May 21, 2025)
+## 1.1.0 (May 26, 2025)
 
 FEATURES:
 * `azurerm_mssql_elasticpool` - added parameter for **enclave_type**.

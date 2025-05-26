@@ -5,6 +5,7 @@ resource "azurerm_mssql_elasticpool" "elasticpool" {
   server_name         = var.server_name
   max_size_gb         = var.max_size_gb
   max_size_bytes      = var.max_size_bytes
+  enclave_type        = var.enclave_type
   zone_redundant      = var.zone_redundant
 
   sku {

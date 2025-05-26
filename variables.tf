@@ -30,11 +30,11 @@ variable "tags" {
 }
 
 variable "enclave_type" {
-  description = "(Optional) The type of enclave being used by the database, valid values are Default or VBS."
+  description = "(Optional) The type of enclave being used by the database, valid values are Default or VBS. Once enabled removing the enclave_type field from the configuration file will force the creation of a new resource."
   type        = string
-  default     = "Default"
+  default     = null
   validation {
-    condition     = contains(["Default", "VBS"], var.enclave_type)
+    condition     = var.enclave_type == null ? true : (contains(["Default", "VBS"], var.enclave_type))
     error_message = "The valid values for enclave_type are Default or VBS."
   }
 }

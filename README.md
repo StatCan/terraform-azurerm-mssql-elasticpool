@@ -36,7 +36,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_capacity"></a> [capacity](#input\_capacity) | (Required) The scale up/out capacity, representing server's compute units. For more information see the documentation for your Elasticpool configuration: vCore-based or DTU-based. | `any` | n/a | yes |
-| <a name="input_enclave_type"></a> [enclave\_type](#input\_enclave\_type) | (Optional) The type of enclave being used by the database.  The options if set are Default or VBS. Once enabled removing the enclave\_type field from the configuration file will force the creation of a new resource. | `string` | `null` | no |
+| <a name="input_enclave_type"></a> [enclave\_type](#input\_enclave\_type) | (Optional) The type of enclave being used by the database, valid values are Default or VBS. Once enabled removing the enclave\_type field from the configuration file will force the creation of a new resource. | `string` | `null` | no |
 | <a name="input_family"></a> [family](#input\_family) | (Optional) The family of hardware Gen4 or Gen5. | `any` | `null` | no |
 | <a name="input_location"></a> [location](#input\_location) | (Required) Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. | `any` | n/a | yes |
 | <a name="input_max_capacity"></a> [max\_capacity](#input\_max\_capacity) | (Optional) The maximum capacity any one database can consume. | `any` | n/a | yes |
